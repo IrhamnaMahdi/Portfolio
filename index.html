@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#080b11" />
+<script>
+  (function () {
+    var d = document.documentElement;
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) d.classList.add("js");
+    setTimeout(function () { if (!d.classList.contains("is-ready")) d.classList.add("force-show"); }, 6000);
+  })();
+</script>
+<title>Irhamna Mahdi | Data Analyst &amp; Data Science</title>
+<meta name="description" content="Portfolio of Irhamna Mahdi, Data Analyst and Data Science graduate specializing in Python, SQL, data visualization, automation, dashboards, and data-driven applications." />
+
+<meta property="og:title" content="Irhamna Mahdi | Data Analyst & Data Science" />
+<meta property="og:description" content="Data Analyst and Data Science graduate specializing in Python, SQL, data visualization, automation, dashboards, and data-driven applications." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css" />
+<noscript><style>.reveal{opacity:1}</style></noscript>
+</head>
+<body>
+
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="pl-top"><span>Portfolio</span><span>Data Analyst</span></div>
+  <div class="pl-name">
+    <span class="pl-line"><span>Irhamna</span></span>
+    <span class="pl-line"><span>Mahdi</span></span>
+  </div>
+  <div class="pl-bottom">
+    <div class="pl-count"><span id="plCount">000</span><em>%</em></div>
+    <div class="pl-bar"><i id="plBar"></i></div>
+    <span class="pl-role">Loading portfolio</span>
+  </div>
+</div>
+
+<header class="navbar" id="navbar">
+  <div class="container">
+    <a href="#home" class="nav-logo">IRHAMNA<span>.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="is-active">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-outline btn-sm">Let's talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <canvas id="hero-canvas"></canvas>
+  <div class="container">
+    <div class="hero-copy">
+      <div class="hero-kicker hero-in"><span class="dot"></span> <span id="typedRole" class="hero-role">Data Analyst</span></div>
+      <h1 data-split="words">Turning Data Into Insights, Automation &amp; Business Value.</h1>
+      <p class="hero-sub hero-in">Data Analyst &amp; Data Science graduate passionate about transforming data into actionable insights through analytics, automation, visualization, and Python-based solutions.</p>
+      <div class="hero-actions hero-in">
+        <a href="#projects" class="btn btn-primary" data-magnetic>View My Projects</a>
+        <a href="#contact" class="btn btn-outline" data-magnetic>Get in Touch</a>
+      </div>
+      <div class="hero-social hero-in">
+        <a href="https://www.linkedin.com/in/irhamna-mahdi-5448a9320" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/IrhamnaMahdi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-visual" id="heroVisual">
+    <div class="photo-back" aria-hidden="true">
+      <span class="photo-glow"></span>
+      <div class="photo-orbit"><span class="orbit-ring"></span><span class="orbit-ring r2"></span></div>
+    </div>
+    <figure class="hero-photo">
+      <div class="photo-frame"><img id="heroPhoto" src="assets/images/profile.png" alt="Portrait of Irhamna Mahdi" decoding="async" fetchpriority="high"></div>
+    </figure>
+    <span class="chip chip-a" aria-hidden="true"><span class="chip-in"><i class="fa-brands fa-python"></i>Python</span></span>
+    <span class="chip chip-b" aria-hidden="true"><span class="chip-in"><i class="fa-solid fa-database"></i>SQL</span></span>
+    <span class="chip chip-c" aria-hidden="true"><span class="chip-in"><i class="fa-solid fa-chart-column"></i>Dashboard</span></span>
+    <span class="chip chip-d" aria-hidden="true"><span class="chip-in"><i class="fa-solid fa-file-excel"></i>Excel</span></span>
+    <span class="chip chip-e" aria-hidden="true"><span class="chip-in"><i class="fa-solid fa-gears"></i>Automation</span></span>
+    </div>
+  </div>
+  <a class="hero-scroll hero-in" href="#about" aria-label="Scroll to About section">
+    <svg viewBox="0 0 100 100" class="scroll-ring" aria-hidden="true">
+      <defs><path id="ringPath" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+      <text><textPath id="ringText" href="#ringPath">DATA ANALYST • DATA SCIENCE • </textPath></text>
+    </svg>
+    <i class="fa-solid fa-arrow-down"></i>
+  </a>
+</section>
+
+<section class="statement">
+  <div class="container">
+    <span class="section-tag reveal">Summary</span>
+    <p class="statement-text" data-scrub>Data Analyst and Data Science graduate with hands-on experience in banking and government institutions, specializing in data analysis, automation, visualization, and data-driven application development.</p>
+  </div>
+</section>
+
+<section class="marquee" aria-hidden="true">
+  <div class="marquee-row" data-dir="left" data-speed="0.7"><div class="marquee-group"><span class="marquee-item">Python</span><i class="marquee-dot"></i><span class="marquee-item outline">SQL</span><i class="marquee-dot"></i><span class="marquee-item">Google BigQuery</span><i class="marquee-dot"></i><span class="marquee-item outline">Looker Studio</span><i class="marquee-dot"></i><span class="marquee-item">Streamlit</span><i class="marquee-dot"></i><span class="marquee-item outline">Microsoft Excel</span><i class="marquee-dot"></i><span class="marquee-item">Web Scraping</span><i class="marquee-dot"></i><span class="marquee-item outline">Automation</span><i class="marquee-dot"></i></div><div class="marquee-group"><span class="marquee-item">Python</span><i class="marquee-dot"></i><span class="marquee-item outline">SQL</span><i class="marquee-dot"></i><span class="marquee-item">Google BigQuery</span><i class="marquee-dot"></i><span class="marquee-item outline">Looker Studio</span><i class="marquee-dot"></i><span class="marquee-item">Streamlit</span><i class="marquee-dot"></i><span class="marquee-item outline">Microsoft Excel</span><i class="marquee-dot"></i><span class="marquee-item">Web Scraping</span><i class="marquee-dot"></i><span class="marquee-item outline">Automation</span><i class="marquee-dot"></i></div></div>
+  <div class="marquee-row small" data-dir="right" data-speed="0.55"><div class="marquee-group"><span class="marquee-item">Data Visualization</span><i class="marquee-dot"></i><span class="marquee-item outline">Forecasting</span><i class="marquee-dot"></i><span class="marquee-item">Linear Regression</span><i class="marquee-dot"></i><span class="marquee-item outline">Dashboard Development</span><i class="marquee-dot"></i><span class="marquee-item">PDF Reporting</span><i class="marquee-dot"></i><span class="marquee-item outline">Data Validation</span><i class="marquee-dot"></i><span class="marquee-item">Statistical Analysis</span><i class="marquee-dot"></i><span class="marquee-item outline">Data Cleaning</span><i class="marquee-dot"></i></div><div class="marquee-group"><span class="marquee-item">Data Visualization</span><i class="marquee-dot"></i><span class="marquee-item outline">Forecasting</span><i class="marquee-dot"></i><span class="marquee-item">Linear Regression</span><i class="marquee-dot"></i><span class="marquee-item outline">Dashboard Development</span><i class="marquee-dot"></i><span class="marquee-item">PDF Reporting</span><i class="marquee-dot"></i><span class="marquee-item outline">Data Validation</span><i class="marquee-dot"></i><span class="marquee-item">Statistical Analysis</span><i class="marquee-dot"></i><span class="marquee-item outline">Data Cleaning</span><i class="marquee-dot"></i></div></div>
+</section>
+
+<section class="section" id="about" data-ghost="About">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-copy">
+        <span class="section-tag reveal">01 · About</span>
+        <h2 data-split="words" style="margin-bottom:22px;">A graduate who builds with data, not just analyzes it.</h2>
+        <p class="reveal">I'm a graduate of the <strong>Bachelor of Data Science</strong> program at Institut Teknologi Sumatera, finishing with a GPA of <strong>3.52 / 4.00</strong>.</p>
+        <p class="reveal">I've spent my internships inside <strong>banking and government institutions</strong>, working hands-on with data analysis, automation, visualization, reporting, and data-driven application development — turning raw operational data into tools people actually use.</p>
+        <p class="reveal">I was the <strong>first graduate</strong> of the Data Science Program at Institut Teknologi Sumatera, completed <strong>Cum Laude</strong>, and finished my degree in <strong>3.5 years</strong>.</p>
+      </div>
+      <div class="stat-grid reveal" data-reveal="right">
+        <div class="stat-card" data-tilt data-tilt-max="5"><div class="num"><span data-counter data-target="3.52" data-decimals="2" data-suffix="">0</span><span style="font-size:16px;color:var(--text-mid);">/4.00</span></div><div class="lbl">GPA</div></div>
+        <div class="stat-card" data-tilt data-tilt-max="5"><div class="num" data-counter data-target="3.5" data-decimals="1" data-suffix="">0</div><div class="lbl">Years to graduate</div></div>
+        <div class="stat-card" data-tilt data-tilt-max="5"><div class="num">Data Science</div><div class="lbl">Degree</div></div>
+        <div class="stat-card" data-tilt data-tilt-max="5"><div class="num">Cum Laude</div><div class="lbl">Achievement</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience" data-ghost="Experience" style="background:var(--bg-elevated); border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft);">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag reveal">02 · Experience</span>
+      <h2 data-split="words">Where I've put data to work.</h2>
+      <p class="lede reveal">Hands-on roles across banking, government statistics, and academia.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item is-current reveal" data-reveal="left">
+        <span class="tl-dot"></span>
+        <div class="tl-head">
+          <span class="tl-role">Data Analyst Intern</span>
+          <span class="tl-period">Aug 2026 – Present</span>
+        </div>
+        <div class="tl-org">PT Bank Syariah Indonesia</div>
+        <ul class="tl-list">
+          <li>Developed a Python-based Gold Printing Request Tracking Application with centralized data management, an interactive dashboard, and Linear Regression forecasting</li>
+          <li>Built automated PDF reporting into the tracking application</li>
+          <li>Developed an automated gold price intelligence platform using web scraping, data validation, and multi-supplier price consolidation</li>
+          <li>Added IDR currency conversion, historical data storage, and Telegram-based reporting to the platform</li>
+        </ul>
+        <div class="tl-badges">
+          <span class="pill">Python</span><span class="pill">Data Analytics</span><span class="pill">Dashboard</span><span class="pill">Forecasting</span><span class="pill">Web Scraping</span><span class="pill">Automation</span><span class="pill">PDF Reporting</span>
+        </div>
+      </div>
+
+      <div class="tl-item reveal" data-reveal="left">
+        <span class="tl-dot"></span>
+        <div class="tl-head">
+          <span class="tl-role">Data Analyst Intern</span>
+          <span class="tl-period">Jun 2025 – Aug 2025</span>
+        </div>
+        <div class="tl-org">Badan Pusat Statistik</div>
+        <ul class="tl-list">
+          <li>Processed questionnaire data using Microsoft Excel and created data visualizations</li>
+          <li>Developed presentation materials and delivered Microsoft Excel training</li>
+          <li>Developed an Honorarium Recording Information System using Streamlit</li>
+          <li>Processed and visualized village potential data</li>
+          <li>Supported SAKERNAS and WILKERSTAT partner training</li>
+        </ul>
+        <div class="tl-badges">
+          <span class="pill">Microsoft Excel</span><span class="pill">Python</span><span class="pill">Streamlit</span><span class="pill">Data Visualization</span>
+        </div>
+      </div>
+
+      <div class="tl-item reveal" data-reveal="left">
+        <span class="tl-dot"></span>
+        <div class="tl-head">
+          <span class="tl-role">Teaching Assistant — Programming Algorithms Practicum</span>
+          <span class="tl-period">Sep 2024 – Dec 2024</span>
+        </div>
+        <div class="tl-org">Institut Teknologi Sumatera</div>
+        <ul class="tl-list">
+          <li>Assisted programming algorithm practicum sessions</li>
+          <li>Explained programming modules to students</li>
+          <li>Supported practical learning activities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="hpin">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag reveal">03 · Projects</span>
+      <h2 data-split="words">Things I've built with data.</h2>
+      <p class="lede reveal">Applications and platforms built to solve real reporting and analysis problems.</p>
+    </div>
+
+    <div class="project-grid" id="projectTrack">
+      <div class="hitem reveal"><article class="project-card" data-tilt data-tilt-max="5">
+        <span class="project-index">Project 01</span>
+        <h3>Gold Printing Request Tracking Application</h3>
+        <p class="desc">Python-based application for tracking gold printing requests with centralized data management, interactive dashboard, forecasting, and automated PDF reporting.</p>
+        <ul class="project-feats">
+          <li>Centralized data management</li>
+          <li>Interactive dashboard</li>
+          <li>Linear Regression forecasting</li>
+          <li>Automated PDF report generation</li>
+        </ul>
+        <div class="project-tech">
+          <span class="skill-tag">Python</span><span class="skill-tag">Data Analytics</span><span class="skill-tag">Dashboard</span><span class="skill-tag">Machine Learning</span><span class="skill-tag">Automation</span>
+        </div>
+      </article></div>
+
+      <div class="hitem reveal"><article class="project-card" data-tilt data-tilt-max="5">
+        <span class="project-index">Project 02</span>
+        <h3>Gold Price Intelligence Platform</h3>
+        <p class="desc">Automated platform for collecting, validating, analyzing, and consolidating gold prices from multiple suppliers.</p>
+        <ul class="project-feats">
+          <li>Web scraping across multiple suppliers</li>
+          <li>Data validation &amp; historical storage</li>
+          <li>IDR conversion + interactive dashboard</li>
+          <li>Automated PDF &amp; Telegram reporting</li>
+        </ul>
+        <div class="project-tech">
+          <span class="skill-tag">Python</span><span class="skill-tag">Web Scraping</span><span class="skill-tag">Data Validation</span><span class="skill-tag">Data Visualization</span><span class="skill-tag">Automation</span>
+        </div>
+      </article></div>
+
+      <div class="hitem reveal"><article class="project-card" data-tilt data-tilt-max="5">
+        <span class="project-index">Project 03</span>
+        <h3>Honorarium Recording Information System</h3>
+        <p class="desc">Information system developed during my internship at Badan Pusat Statistik using Streamlit for recording and managing honorarium data.</p>
+        <ul class="project-feats">
+          <li>Built with Streamlit</li>
+          <li>Structured honorarium data management</li>
+        </ul>
+        <div class="project-tech">
+          <span class="skill-tag">Python</span><span class="skill-tag">Streamlit</span><span class="skill-tag">Data Management</span>
+        </div>
+      </article></div>
+
+      <div class="hitem reveal"><article class="project-card" data-tilt data-tilt-max="5">
+        <span class="project-index">Project 04</span>
+        <h3>Sales Query, Report &amp; Dashboard</h3>
+        <p class="desc">Mini project from the KarirNex Data Analyst Bootcamp involving query development, reporting, and sales dashboard development for a kitchenware store.</p>
+        <ul class="project-feats">
+          <li>SQL &amp; BigQuery query development</li>
+          <li>Looker Studio dashboard build</li>
+        </ul>
+        <div class="project-tech">
+          <span class="skill-tag">Excel</span><span class="skill-tag">SQL</span><span class="skill-tag">Google BigQuery</span><span class="skill-tag">Python</span><span class="skill-tag">Looker Studio</span>
+        </div>
+      </article></div>
+      <div class="hitem hend">
+        <a class="hend-card" href="https://github.com/IrhamnaMahdi" target="_blank" rel="noopener">
+          <span class="hend-label">Want to see more?</span>
+          <strong>Explore my GitHub</strong>
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hprogress" aria-hidden="true">
+      <span class="hcount"><b id="hCurrent">01</b> / 04</span>
+      <span class="hbar"><i id="hBar"></i></span>
+      <span class="hhint">Keep scrolling</span>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="section" id="skills" data-ghost="Skills" style="background:var(--bg-elevated); border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft);">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag reveal">04 · Skills</span>
+      <h2 data-split="words">The toolkit behind the work.</h2>
+      <p class="lede reveal">Grouped by how I actually use them, from raw data to a finished dashboard.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal" data-tilt data-tilt-max="4">
+        <h3>Data Analytics</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Microsoft Excel</span><span class="skill-tag">SQL</span><span class="skill-tag">Google BigQuery</span><span class="skill-tag">Data Cleaning</span><span class="skill-tag">Data Validation</span><span class="skill-tag">Data Analysis</span><span class="skill-tag">Data Visualization</span><span class="skill-tag">Reporting</span>
+        </div>
+      </div>
+      <div class="skill-card reveal" data-tilt data-tilt-max="4">
+        <h3>Programming</h3>
+        <div class="skill-tags"><span class="skill-tag">Python</span></div>
+      </div>
+      <div class="skill-card reveal" data-tilt data-tilt-max="4">
+        <h3>Business Intelligence</h3>
+        <div class="skill-tags"><span class="skill-tag">Google Looker Studio</span><span class="skill-tag">Dashboard Development</span></div>
+      </div>
+      <div class="skill-card reveal" data-tilt data-tilt-max="4">
+        <h3>Data Science</h3>
+        <div class="skill-tags"><span class="skill-tag">Linear Regression</span><span class="skill-tag">Forecasting</span><span class="skill-tag">Statistical Analysis</span></div>
+      </div>
+      <div class="skill-card reveal" data-tilt data-tilt-max="4">
+        <h3>Development</h3>
+        <div class="skill-tags"><span class="skill-tag">Streamlit</span><span class="skill-tag">Automation</span><span class="skill-tag">Web Scraping</span><span class="skill-tag">PDF Reporting</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="certificates" data-ghost="Certificates">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag reveal">05 · Certificates</span>
+      <h2 data-split="words">Verified skills &amp; training.</h2>
+      <p class="lede reveal">Click any card to view the certificate details.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card reveal" data-reveal="scale" data-tilt data-tilt-max="6" data-cert="toefl">
+        <div class="cert-icon"><i class="fa-solid fa-language"></i></div>
+        <h3>TOEFL Certificate</h3>
+        <div class="cert-issuer">Global Operation Indonesia</div>
+        <div class="cert-meta">Issued May 23, 2026 · Valid until May 23, 2028</div>
+        <button class="btn btn-outline btn-sm" style="align-self:flex-start;">View Certificate</button>
+      </div>
+      <div class="cert-card reveal" data-reveal="scale" data-tilt data-tilt-max="6" data-cert="alibaba">
+        <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>Alibaba Cloud Big Data Training</h3>
+        <div class="cert-issuer">Alibaba Cloud</div>
+        <div class="cert-meta">Jakarta · 29–31 July 2024</div>
+        <button class="btn btn-outline btn-sm" style="align-self:flex-start;">View Certificate</button>
+      </div>
+      <div class="cert-card reveal" data-reveal="scale" data-tilt data-tilt-max="6" data-cert="karirnex">
+        <div class="cert-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Data Analyst Bootcamp</h3>
+        <div class="cert-issuer">KarirNex by PT Ebiz Karisma Internasional</div>
+        <div class="cert-meta">Predicate: Expert · 20 JP · July 2026</div>
+        <button class="btn btn-outline btn-sm" style="align-self:flex-start;">View Certificate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="certModal">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-panel">
+    <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<section class="section" id="education" data-ghost="Education" style="background:var(--bg-elevated); border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft);">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag reveal">06 · Education</span>
+      <h2 data-split="words">Academic background.</h2>
+    </div>
+
+    <div class="edu-item reveal" data-reveal="left">
+      <div class="edu-head">
+        <h3>Institut Teknologi Sumatera</h3>
+        <span class="edu-period">Aug 2022 – Apr 2026</span>
+      </div>
+      <div class="edu-degree">Bachelor of Data Science</div>
+      <div class="edu-gpa">GPA: 3.52 / 4.00</div>
+      <ul class="tl-list">
+        <li>First graduate of the Data Science Program</li>
+        <li>Cum Laude</li>
+        <li>Completed in 3.5 years</li>
+        <li>Participated in national seminars and webinars</li>
+        <li>Participant in Satria Data 2024 Big Data Competition</li>
+      </ul>
+    </div>
+
+    <div class="edu-item reveal" data-reveal="right">
+      <div class="edu-head">
+        <h3>SMAN 2 Tambun Selatan</h3>
+        <span class="edu-period">Jul 2019 – May 2022</span>
+      </div>
+      <div class="edu-degree">Mathematics and Natural Sciences</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="achievements" data-ghost="Achievements">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag reveal">07 · Achievements &amp; Training</span>
+      <h2 data-split="words">Competitions, bootcamps &amp; webinars.</h2>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card reveal"><i class="fa-solid fa-trophy"></i> Satria Data 2024 — Big Data Competition Participant</div>
+      <div class="ach-card reveal"><i class="fa-solid fa-database"></i> Big Data Training by HiColleagues in collaboration with Alibaba Cloud</div>
+      <div class="ach-card reveal"><i class="fa-solid fa-laptop-code"></i> Bootcamp Data Analyst — Excel, SQL, Python, Google Looker Studio</div>
+      <div class="ach-card reveal"><i class="fa-solid fa-table"></i> Optimization of Microsoft Excel for Data Analysis webinar</div>
+      <div class="ach-card reveal"><i class="fa-solid fa-chart-simple"></i> Panel Data Analysis with STATA webinar</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="organization" style="background:var(--bg-elevated); border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft);">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag reveal">08 · Organizational Experience</span>
+      <h2 data-split="words">Beyond the classroom.</h2>
+    </div>
+    <div class="org-card reveal">
+      <div class="tl-head">
+        <span class="tl-role">Public Relations</span>
+        <span class="tl-period">Jul 2020 – May 2021</span>
+      </div>
+      <div class="tl-org">Information, Communication, and Technology</div>
+      <ul class="tl-list">
+        <li>Coordinated extracurricular clubs</li>
+        <li>Coordinated activities with other schools</li>
+        <li>Organized technology-focused school visits</li>
+        <li>Organized technology competitions across Bekasi Regency</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact" data-ghost="Contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="section-tag reveal">09 · Contact</span>
+        <h2 data-split="words" style="font-size:clamp(28px,3.4vw,40px); margin-bottom:14px;">Let's Work With Data.</h2>
+        <p class="lede reveal">Interested in data analytics, automation, dashboards, or data-driven solutions? Let's connect.</p>
+      </div>
+      <div class="contact-links reveal" data-reveal="right">
+          <div class="contact-link is-static is-primary">
+            <i class="fa-regular fa-envelope"></i>
+            <div><div class="l1">Email</div><div class="l2">irhamnamahdi@gmail.com</div></div>
+          </div>
+          <a class="contact-link" href="https://www.linkedin.com/in/irhamna-mahdi-5448a9320" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <div><div class="l1">LinkedIn</div><div class="l2">irhamna-mahdi</div></div>
+          </a>
+          <a class="contact-link" href="https://github.com/IrhamnaMahdi" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+            <div><div class="l1">GitHub</div><div class="l2">IrhamnaMahdi</div></div>
+          </a>
+          <div class="contact-link is-static">
+            <i class="fa-solid fa-location-dot"></i>
+            <div><div class="l1">Location</div><div class="l2">Bekasi, Jawa Barat, Indonesia</div></div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-clock"><span class="dot"></span><span>Bekasi, <b id="clock">--:--:--</b> WIB</span></div>
+      <button type="button" class="to-top" id="toTop"><i class="fa-solid fa-arrow-up"></i><span>Back to top</span></button>
+    </div>
+    <div class="footer-mark" id="footerMark" aria-hidden="true">IRHAMNA MAHDI</div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Irhamna Mahdi. Built with HTML, CSS &amp; JavaScript.</p>
+      <p>Bekasi, Jawa Barat, Indonesia</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/vendor/gsap.min.js" defer></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/vendor/lenis.min.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
